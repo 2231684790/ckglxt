@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEDE798A-4D98-4EE7-B93A-D74AD851AAE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="统计信息\Excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="统计信息\Excel.Designer.cs">
+      <DependentUpon>Excel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品管理\goodsinsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="商品管理\goodsinsert.Designer.cs">
+      <DependentUpon>goodsinsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginInfo.cs" />
+    <Compile Include="Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="员工管理\personinsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="员工管理\personinsert.Designer.cs">
+      <DependentUpon>personinsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="仓库管理\storemgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仓库管理\storemgForm.Designer.cs">
+      <DependentUpon>storemgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仓库管理\storemgmgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仓库管理\storemgmgForm.Designer.cs">
+      <DependentUpon>storemgmgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仓库管理\updatefrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仓库管理\updatefrom.Designer.cs">
+      <DependentUpon>updatefrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="员工管理\personForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="员工管理\personForm.Designer.cs">
+      <DependentUpon>personForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品管理\goodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="商品管理\goodsForm.Designer.cs">
+      <DependentUpon>goodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品管理\goodsupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="商品管理\goodsupdate.Designer.cs">
+      <DependentUpon>goodsupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="入库管理\ruku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库管理\ruku.Designer.cs">
+      <DependentUpon>ruku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出库管理\chuku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出库管理\chuku.Designer.cs">
+      <DependentUpon>chuku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="库存查询\kucun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="库存查询\kucun.Designer.cs">
+      <DependentUpon>kucun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据报表\reportform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据报表\reportform.Designer.cs">
+      <DependentUpon>reportform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="入库查询\rukurpform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库查询\rukurpform.Designer.cs">
+      <DependentUpon>rukurpform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出库查询\chukupform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出库查询\chukupform.Designer.cs">
+      <DependentUpon>chukupform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainformuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainformuser.Designer.cs">
+      <DependentUpon>Mainformuser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="统计信息\Excel.resx">
+      <DependentUpon>Excel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品管理\goodsinsert.resx">
+      <DependentUpon>goodsinsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="员工管理\personinsert.resx">
+      <DependentUpon>personinsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="仓库管理\storemgForm.resx">
+      <DependentUpon>storemgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仓库管理\storemgmgForm.resx">
+      <DependentUpon>storemgmgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仓库管理\updatefrom.resx">
+      <DependentUpon>updatefrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="员工管理\personForm.resx">
+      <DependentUpon>personForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品管理\goodsForm.resx">
+      <DependentUpon>goodsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品管理\goodsupdate.resx">
+      <DependentUpon>goodsupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="入库管理\ruku.resx">
+      <DependentUpon>ruku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库管理\chuku.resx">
+      <DependentUpon>chuku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="库存查询\kucun.resx">
+      <DependentUpon>kucun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据报表\reportform.resx">
+      <DependentUpon>reportform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="入库查询\rukurpform.resx">
+      <DependentUpon>rukurpform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库查询\chukupform.resx">
+      <DependentUpon>chukupform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainformuser.resx">
+      <DependentUpon>Mainformuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\名侦探柯南12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\名侦探柯南3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\名侦探柯南15.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

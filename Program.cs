@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ckglxt
+namespace WindowsFormsApplication1
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// 应用程序的主入口点。
@@ -16,7 +16,7 @@ namespace ckglxt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Mainform());
         }
     }
 }
